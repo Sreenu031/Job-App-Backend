@@ -15,10 +15,10 @@ public class JobRestController {
     private JobService jobService;
 
     @GetMapping("/jobPosts")
-
     public List<JobPost> getAllJobs(){
         return jobService.getAllJobs();
     }
+
     @GetMapping("jobPost/{jobId}")
     public JobPost getJob(@PathVariable("jobId") int jobId){
         return jobService.getJob(jobId);
